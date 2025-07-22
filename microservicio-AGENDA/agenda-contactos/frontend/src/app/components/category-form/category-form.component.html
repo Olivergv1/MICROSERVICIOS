@@ -1,0 +1,8 @@
+<h2>{{ esEdicion ? 'Editar' : 'Nueva' }} Categoría</h2>
+<form (ngSubmit)="guardarCategoria()" class="form">
+  <div class="form-group">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" [(ngModel)]="categoria.nombre" name="name" required class="form-control">
+  </div>
+  <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

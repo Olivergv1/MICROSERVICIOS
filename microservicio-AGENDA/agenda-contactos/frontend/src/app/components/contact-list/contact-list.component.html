@@ -1,0 +1,26 @@
+<div class="header">
+  <h2>Contactos</h2>
+  <a routerLink="/contactos/nuevo" class="btn btn-primary">Nuevo Contacto</a>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Teléfono</th>
+      <th>Categoría</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let contacto of contactos">
+      <td>{{ contacto.nombre }}</td>
+      <td>{{ contacto.telefono }}</td>
+      <td>{{ getNombreCategoria(contacto.idCategoria) }}</td>
+      <td class="actions">
+        <button class="btn btn-secondary">Llamar</button>
+        <a [routerLink]="['/contactos/editar', contacto.id]" class="btn btn-secondary">Editar</a>
+        <button (click)="eliminarContacto(contacto.id)" class="btn btn-danger">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
