@@ -12,10 +12,10 @@ let categorias = [
     { id: 1, nombre: 'Familia' },
     { id: 2, nombre: 'Amigos' },
     { id: 3, nombre: 'Trabajo' },
-    { id: 3, nombre: 'Universidad' }
+    { id: 4, nombre: 'Universidad' }
 ];
 
-let proximoIdCategoria = 4;
+let proximoIdCategoria = 5;
 
 // OBTENER /categorias
 aplicacion.get('/categorias', (solicitud, respuesta) => {
